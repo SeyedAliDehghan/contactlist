@@ -1,0 +1,12 @@
+.sideBar{
+    padding:1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    grid-area: sidebar;
+    background-color: white;
+    width:10vw;
+    height:80vh;
+    overflow: auto;
+  
+    
+  }
