@@ -17,7 +17,7 @@
   }
   .header input{
     outline: 0;
-    border: 1px solid black;
+    border: 0;
     width: 78%;
     border-radius: 5px;
   

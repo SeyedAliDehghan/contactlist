@@ -1,0 +1,12 @@
+.ContactContainer {
+  padding: 1rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+  grid-area: main;
+  width: 77vw;
+  height: 80vh;
+  overflow: auto;
+}
