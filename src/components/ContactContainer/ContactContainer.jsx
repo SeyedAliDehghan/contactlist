@@ -1,14 +1,20 @@
-import React from "react";
-import { HeadText, ContactList, ContactItem } from "..";
+import { React, useContext } from "react";
+import { HeadText, ContactItem } from "..";
 import "./ContactContainer.css";
-import data from "../data";
+import { ContactsContext } from "../Context/ContactsContext";
+import { FilterContext } from "../Context/ContactsContext";
 
 const ContactContainer = () => {
+  const { contacts, setContacts } = useContext(ContactsContext);
+  const { filter, setFilter } = useContext(FilterContext);
   return (
     <div className="ContactContainer">
       <HeadText text="Contact List:" />
-      <ContactList>
-        {data.map((item) => (
+      {contacts
+        .filter((contact) =>
+          (contact.firstName+" "+contact.lastName).toLowerCase().includes(filter.toLowerCase())
+        )
+        .map((item) => (
           <ContactItem
             key={item.id}
             firstName={item.firstName}
@@ -18,7 +24,16 @@ const ContactContainer = () => {
             phone={item.phone}
           />
         ))}
-      </ContactList>
+      {/* {contacts.map((item) => (
+          <ContactItem
+            key={item.id}
+            firstName={item.firstName}
+            lastName={item.lastName}
+            img={item.img}
+            group={item.group}
+            phone={item.phone}
+          />
+        ))} */}
     </div>
   );
 };

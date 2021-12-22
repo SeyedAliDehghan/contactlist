@@ -1,5 +1,4 @@
 import ContactContainer from "./ContactContainer/ContactContainer";
-import ContactList from "./ContactList/ContactList";
 import Header from "./header/Header";
 import HeadText from "./HeadText/HeadText";
 import Main from "./Main/Main";
@@ -13,7 +12,6 @@ export {
   HeadText,
   Main,
   SideBar,
-  ContactList,
   ContactItem,
   GroupItem,
 }

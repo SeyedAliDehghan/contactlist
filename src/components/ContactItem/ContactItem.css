@@ -9,7 +9,7 @@
   transition: all 0.2s ease;
 }
 .item:hover{
-    background-color: #00bccd42;
+    background-color: #49494925;
 }
 .item img {
   width: 4rem;

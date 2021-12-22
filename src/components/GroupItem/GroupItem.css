@@ -12,7 +12,7 @@
     transition: all 0.2s ease;
   }
   .groupItem:hover{
-    background-color: #00bccd42;
+    background-color: #49494925;
     cursor: pointer;
 }
   

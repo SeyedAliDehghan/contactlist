@@ -1,14 +1,18 @@
-import React from 'react'
-import {SideBar,ContactContainer} from '..'
-import './Main.css'
+import { React } from "react";
+import { SideBar, ContactContainer } from "..";
+import ContactsContextProvider from '../Context/ContactsContext'
+
+import "./Main.css";
 
 const Main = () => {
-    return (
-        <div className="contentContainer">
-            <SideBar/>
-            <ContactContainer/>
-        </div>
-    )
-}
+  return (
+    <ContactsContextProvider>
+      <div className="contentContainer">
+        <SideBar />
+        <ContactContainer />
+      </div>
+    </ContactsContextProvider>
+  );
+};
 
-export default Main
+export default Main;
