@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import {Header,Main} from './components/';
+import "./App.css";
+import { Header, Main } from "./components/";
+import ContactsContextProvider from "./components/Context/ContactsContext";
 
 function App() {
-
   return (
     <div className="App">
-      <Header/>
-      <Main/>
+      <ContactsContextProvider>
+        <Header />
+      </ContactsContextProvider>
+      <Main />
     </div>
   );
 }
