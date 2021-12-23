@@ -24,12 +24,18 @@
   outline: 0;
   border: 0;
   background-color: #00bdcd;
-  width: 8rem;
+  width: 7.5rem;
   height:2rem;
   border-radius: 5px;
   color: white;
   font-weight: bolder;
   font-size: 1rem;
+}
+.item button:hover {
+  cursor: pointer;
+}
+.item button:first-of-type{
+  margin-right: 1rem;
 }
 .itemsWidth{
   width:25%;

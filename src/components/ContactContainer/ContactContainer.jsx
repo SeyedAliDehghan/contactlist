@@ -11,12 +11,18 @@ const ContactContainer = () => {
     <div className="ContactContainer">
       <HeadText text="Contact List:" />
       {contacts
-        .filter((contact) =>
-          (contact.firstName+" "+contact.lastName).toLowerCase().includes(filter.toLowerCase()) || contact.phone.includes(filter)
+        .filter(
+          (contact) =>
+            (contact.firstName + " " + contact.lastName)
+              .toLowerCase()
+              .includes(filter.toLowerCase()) ||
+            contact.phone.includes(filter) ||
+            contact.group.toLowerCase().includes(filter.toLowerCase())
         )
         .map((item) => (
           <ContactItem
             key={item.id}
+            id={item.id}
             firstName={item.firstName}
             lastName={item.lastName}
             img={item.img}

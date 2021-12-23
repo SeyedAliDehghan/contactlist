@@ -5,20 +5,22 @@
   justify-content: space-between;
   height: 3rem;
 }
-.header button{
-    outline: 0;
-    border: 0;
-    background-color:#00BDCD;
-    width: 10%;
-    border-radius: 5px;
-    color:white;
-    font-weight: bolder;
-    font-size: 1rem;
-  }
-  .header input{
-    outline: 0;
-    border: 0;
-    width: 78%;
-    border-radius: 5px;
-  
-  }
+.header button {
+  outline: 0;
+  border: 0;
+  background-color: #00bdcd;
+  width: 10%;
+  border-radius: 5px;
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+.header button:hover {
+  cursor: pointer;
+}
+.header input {
+  outline: 0;
+  border: 0;
+  width: 78%;
+  border-radius: 5px;
+}

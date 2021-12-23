@@ -3,12 +3,12 @@ import data from "../data";
 
 export const ContactsContext = createContext({
   contacts: [],
-  setContacts: (input) => {}
+  setContacts: () => {}
 });
 
 export const GroupContext = createContext({
   contacts: [],
-  setContacts: (input) => {}
+  setGroups: () => {}
 });
 
 export const FilterContext = createContext({
@@ -18,8 +18,8 @@ export const FilterContext = createContext({
 
 const ContactsContextProvider = ({ children }) => {
   const [contacts, setContacts] = useState(data);
-  const [filter, setFilter] = useState("");
   const [groups, setGroups] = useState([{ id: 1, name: "All" }]);
+  const [filter, setFilter] = useState("");
   return (
     <ContactsContext.Provider value={{ contacts, setContacts }}>
       <GroupContext.Provider value={{ groups, setGroups }}>
