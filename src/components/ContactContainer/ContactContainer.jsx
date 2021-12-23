@@ -12,7 +12,7 @@ const ContactContainer = () => {
       <HeadText text="Contact List:" />
       {contacts
         .filter((contact) =>
-          (contact.firstName+" "+contact.lastName).toLowerCase().includes(filter.toLowerCase())
+          (contact.firstName+" "+contact.lastName).toLowerCase().includes(filter.toLowerCase()) || contact.phone.includes(filter)
         )
         .map((item) => (
           <ContactItem

@@ -8,11 +8,6 @@ const Header = () => {
   const { filter, setFilter } = useContext(FilterContext);
   const { contacts, setContacts } = useContext(ContactsContext);
 
-  const handleAdd=()=>{
-    setContacts([...contacts,{id:10,firstName:"s",lastName:"s",group:"All",phone:"ds",img:"s"}])
-    console.log(contacts);
-  }
-
   useEffect(() => {
     
   }, [setFilter])
@@ -23,9 +18,9 @@ const Header = () => {
           type="search"
           placeholder="Type To Search..."
           value={filter}
-          onChange={(e) => console.log(contacts)}
+          onChange={(e) => setFilter(e.target.value)}
         />
-        <button onClick={()=>handleAdd()}>Add Contact</button>
+        <button>Add Contact</button>
         <button>Add Group</button>
       </div>
     </ContactsContextProvider>

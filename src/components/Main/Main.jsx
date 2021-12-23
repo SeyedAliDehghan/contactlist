@@ -6,12 +6,10 @@ import "./Main.css";
 
 const Main = () => {
   return (
-    <ContactsContextProvider>
       <div className="contentContainer">
         <SideBar />
         <ContactContainer />
       </div>
-    </ContactsContextProvider>
   );
 };
 
