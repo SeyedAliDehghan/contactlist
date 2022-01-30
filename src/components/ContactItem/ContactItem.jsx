@@ -81,7 +81,7 @@ const ContactItem = ({ id, firstName, lastName, img, phone, group }) => {
       <div className="itemsWidth" style={{ textAlign: "right" }}>
         {phone}
       </div>
-      <div className="itemsWidth" style={{ textAlign: "right" }}>
+      <div className="itemsWidth ContactButtons" style={{ textAlign: "right" }}>
         <button onClick={() => handleDeleteItem(id)}>Delete</button>
         <button onClick={() => handleEditItem(id)}>Edit</button>
       </div>

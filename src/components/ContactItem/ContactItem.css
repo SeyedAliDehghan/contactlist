@@ -40,3 +40,19 @@
 .itemsWidth{
   width:25%;
 }
+.ContactButtons{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media screen and (max-width: 1440px){
+  .ContactButtons{
+    /* background-color:red; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .item button:first-of-type{
+    margin-bottom: 0.5rem;
+  }
+}

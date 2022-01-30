@@ -7,6 +7,17 @@
     width:20vw;
     height:80vh;
     overflow: auto;
-  
-    
+  }
+  @media screen and (max-width:768px){
+    .sideBar{
+      padding:1rem;
+      box-sizing: border-box;
+      border-radius: 5px;
+      grid-area: sidebar;
+      background-color: white;
+      width:96vw;
+      height:50vh;
+      overflow: auto;
+      margin-bottom: 1rem;
+    }
   }

@@ -1,6 +1,14 @@
-.contentContainer{
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .contentContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 1rem;
   }
+}
