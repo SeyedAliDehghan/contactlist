@@ -52,7 +52,22 @@
     flex-direction: column;
     justify-content: center;
   }
+  .item{
+    padding:0;
+  }
+  .item button{
+    margin-left: -2rem;
+    width: 5.5rem;
+
+  }
   .item button:first-of-type{
     margin-bottom: 0.5rem;
   }
+  .itemsWidth:last-child{
+    width:15%;
+  }
+  .itemsWidth:nth-child(2){
+    display:none;
+  }
+
 }

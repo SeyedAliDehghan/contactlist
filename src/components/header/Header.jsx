@@ -6,7 +6,8 @@ import { ContactsContext } from "../Context/ContactsContext";
 import { GroupContext } from "../Context/ContactsContext";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-let imgstr="https://s4.uupload.ir/files/pngtree-character-avatar-of-businessman-with-beard-png-image_2166772_v8lg.jpg"
+let imgstr =
+  "https://s4.uupload.ir/files/pngtree-character-avatar-of-businessman-with-beard-png-image_2166772_v8lg.jpg";
 
 const Header = () => {
   const { filter, setFilter } = useContext(FilterContext);
@@ -53,7 +54,6 @@ const Header = () => {
     });
   };
 
-
   const handleAddContact = () => {
     (async () => {
       const { value: formValues } = await Swal.fire({
@@ -67,10 +67,10 @@ const Header = () => {
             document.getElementById("swal-input2").value,
             document.getElementById("swal-input3").value,
             document.getElementById("swal-input4").value,
-          ]
-        }
-      })
-      
+          ];
+        },
+      });
+
       if (formValues) {
         console.log(formValues);
         setContacts([
@@ -83,13 +83,12 @@ const Header = () => {
             group: formValues[3],
             img: imgstr,
           },
-        ])
+        ]);
         console.log(contacts);
         Swal.fire("Added!", "New Contact Added!", "success");
       }
-      })()  
+    })();
   };
-
 
   return (
     <ContactsContextProvider>
@@ -100,8 +99,10 @@ const Header = () => {
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
-        <button onClick={() => handleAddContact()}>Add Contact</button>
-        <button onClick={() => handleAddGroup()}>Add Group</button>
+        <span className="headButtonContainer">
+          <button onClick={() => handleAddContact()}>Add Contact</button>
+          <button onClick={() => handleAddGroup()}>Add Group</button>
+        </span>
       </div>
     </ContactsContextProvider>
   );
